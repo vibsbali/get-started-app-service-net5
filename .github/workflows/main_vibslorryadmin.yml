@@ -24,10 +24,10 @@ jobs:
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
-      working-directory: ./lorryadmin
+      working-directory: ./vibslorryadmin
 
     - name: dotnet publish
-      working-directory: ./lorryadmin
+      working-directory: ./vibslorryadmin
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
     - name: Upload artifact for deployment job
