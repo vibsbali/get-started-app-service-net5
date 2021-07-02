@@ -23,12 +23,9 @@ jobs:
         include-prerelease: true
 
     - name: Build with dotnet
-      working-directory: ./lorryadmin
       run: dotnet build --configuration Release
-      
 
     - name: dotnet publish
-      working-directory: ./lorryadmin
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
     - name: Upload artifact for deployment job
@@ -56,5 +53,5 @@ jobs:
       with:
         app-name: 'vibslorryadmin'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_85017e6d3cb041b8a9c3cbe1c6120ba3 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6d6881c09c344424aaff98e7d0e32a07 }}
         package: .
